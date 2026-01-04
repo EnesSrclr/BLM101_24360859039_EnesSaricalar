@@ -1,0 +1,108 @@
+import os
+
+def html_sayfasi_olustur():
+    print("--- HTML Sayfası Oluşturucuya Hoş Geldiniz ---")
+    print("Lütfen aşağıdaki bilgileri giriniz.\n")
+
+    # Kullanıcıdan Verileri Alma (Input)
+    ad_soyad = input("Adınız ve Soyadınız nedir?: ")
+    biyografi = input("Kısa bir biyografi yazınız: ")
+    dersler_input = input("Aldığınız dersleri araya virgül koyarak yazınız (Örn: Matematik, Fizik, Python): ")
+
+    # Dersleri listeye çevirme ve HTML listesi (<li>) haline getirme
+    dersler_listesi = dersler_input.split(',')
+    dersler_html = ""
+    for ders in dersler_listesi:
+        # Strip ile baştaki/sondaki boşlukları temizliyoruz
+        dersler_html += f"            <li>{ders.strip()}</li>\n"
+
+    # HTML Şablonunu Hazırlama
+    # F-String kullanarak değişkenleri HTML kodunun içine yerleştirme
+    html_icerigi = f"""
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{ad_soyad} - Kişisel Sayfa</title>
+    <style>
+        body {{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+            min-height: 100vh;
+            margin: 0;
+        }}
+        .container {{
+            
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 600px;
+            width: 100%;
+        }}
+        h1 {{
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }}
+        .bio {{
+            font-style: italic;
+            color: #555;
+            background-color: #e8f6f3;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 5px solid #1abc9c;
+        }}
+        ul {{
+            list-style-type: square;
+        }}
+        li {{
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }}
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Merhaba, Ben {ad_soyad}!</h1>
+        
+        <h3>Hakkımda</h3>
+        <p class="bio">{biyografi}</p>
+        
+        <h3>Aldığım Dersler</h3>
+        <ul>
+{dersler_html}        </ul>
+    </div>
+
+</body>
+</html>
+    """
+
+    # 3. Dosyayı Yazma 
+    dosya_adi = "index.html"
+    
+    # 'w' modu dosyayı sıfırdan oluşturur veya üzerine yazar.
+    
+    try:
+        with open(dosya_adi, "w", encoding="utf-8") as dosya:
+            dosya.write(html_icerigi)
+        
+        print("\n" + "="*40)
+        print(f"BAŞARILI! '{dosya_adi}' dosyası oluşturuldu.")
+        print(f"Dosya konumu: {os.getcwd()}\\{dosya_adi}")
+        print("Dosyayı çift tıklayarak tarayıcınızda açabilirsiniz.")
+        print("="*40)
+        
+    except Exception as e:
+        print(f"Bir hata oluştu: {e}")
+
+# Programı çalıştır
+if __name__ == "__main__":
+    html_sayfasi_olustur()
