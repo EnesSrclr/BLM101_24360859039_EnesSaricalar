@@ -6,6 +6,8 @@
 
 **Konu:** Ağlar, İnternet ve HTML (5. Grup)
 
+**Video Linki:** https://www.youtube.com/watch?v=zzspxoqwwc8
+
 
 **PROJE DOKÜMANTASYONU: PYTHON İLE OTOMATİK HTML OLUŞTURUCU**
 
