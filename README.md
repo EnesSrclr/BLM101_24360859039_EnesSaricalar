@@ -1,8 +1,8 @@
 # BLM101_24360859039_EnesSaricalar
 
-**İsim:**Enes SARICALAR
+**İsim:** Enes SARICALAR
 
-**Numara:**24360859039
+**Numara:** 24360859039
 
 **Konu:** Ağlar, İnternet ve HTML (5. Grup)
 
