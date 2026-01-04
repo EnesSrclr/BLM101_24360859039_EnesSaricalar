@@ -1,9 +1,10 @@
 # BLM101_24360859039_EnesSaricalar
 
-İsim:Enes SARICALAR
-Numara:24360859039
+**İsim:**Enes SARICALAR
 
-KONU:Grup: Ağlar, İnternet ve HTML
+**Numara:**24360859039
+
+**Konu:** Ağlar, İnternet ve HTML (5. Grup)
 
 
 **PROJE DOKÜMANTASYONU: PYTHON İLE OTOMATİK HTML OLUŞTURUCU**
