@@ -1,7 +1,7 @@
 # BLM101_24360859039_EnesSaricalar
 
 
-**PROJE DOKÜMANTASYONU: PYTHON İLE OTOMATİK HTML OLUŞTURUCU **
+**PROJE DOKÜMANTASYONU: PYTHON İLE OTOMATİK HTML OLUŞTURUCU**
 
 **1. PROJE HAKKINDA** Bu proje, kullanıcının konsol üzerinden girdiği kişisel bilgileri (isim, biyografi, ders listesi) işleyerek, modern CSS tasarımlı ve anında görüntülenebilir bir web sayfası (index.html) üreten bir **Python** otomasyon aracıdır. 
 
